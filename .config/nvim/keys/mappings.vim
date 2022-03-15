@@ -17,14 +17,16 @@ autocmd FileType markdown inoremap ;pic ![Title](path/to/file.png)<ESC>0wcw
 autocmd FileType markdown inoremap ;c ``<Space><ESC>hi
 
 " --- latex ---
+autocmd FileType tex inoremap ;i \begin{itemize}<Enter>\item <Enter><Esc>0i\end{itemize}<Esc>kA
+autocmd FileType tex inoremap ;t1 \usepackage[T1]{fontenc}
 autocmd FileType tex inoremap ;dc \documentclass[a4paper,12pt]{article}<Enter>
 autocmd FileType tex inoremap ;bd \begin{document}<Enter><Enter><Enter><Enter>\end{document}<ESC>2ki
-autocmd FileType tex inoremap ;t \title{}<Enter><Enter>\maketitle<Enter><ESC>3k$i
+autocmd FileType tex inoremap ;tl \title{}<Enter><Enter>\maketitle<Enter><ESC>3k$i
 autocmd FileType tex inoremap ;a \author{Daniel Siutkowski}<Enter>
 autocmd FileType tex inoremap ;d \date{\today}<Enter>
 autocmd FileType tex inoremap ;p \usepackage{}<ESC>i
 autocmd FileType tex inoremap ;s \section{}<ESC>i
-autocmd FileType tex inoremap ;t \begin{tabular}{  }<Enter>\hline<Enter><Enter>\end{tabular}<Esc>3k$hi
+autocmd FileType tex inoremap ;tb \begin{tabular}{  }<Enter>\hline<Enter><Enter>\end{tabular}<Esc>3k$hi
 
 " --- tabs ---
 let g:airline#extensions#tabline#enabled=1
